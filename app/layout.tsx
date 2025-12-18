@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'JobBoard - Find Your Dream Job',
-  description: 'The best place to find your next career opportunity.',
+  title: 'ドラピタ - 企業管理画面',
+  description: 'ドラピタ企業向け管理画面アプリケーション',
 };
 
 export default function RootLayout({
@@ -17,13 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50`}>
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+    <html lang="ja">
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
   );
